@@ -226,28 +226,14 @@ public class PracticeService {
 //		 정수 : 5
 //		 1, 2, 3, 2, 1
 		 
-		 System.out.print("정수 : ");
-		 int input = sc.nextInt();
 		 
 		 
-		 int count = 1;
-		 if(input%2!=1 || input<3) {
-			System.out.println("다시 입력하세요.");
-		}else {
-			int [] arr = new int[input];
-			for (int i = 0; i<arr.length; i++) {
-				arr[i]=i;
-				if(i>=arr.length/2) {
-					arr[i]-=count;
-					count++;
-					}
-				System.out.print(arr[i]+" ");
-					 
-			}
-			
-		}
+		 
+		 
+		 
 		 
 	 }
+
 
 	
 	
