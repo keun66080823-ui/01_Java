@@ -224,10 +224,8 @@ public class ArrayExample1 {
 		
 		
 		
-		
-		
-		
 	}
+	
 	
 	public void ex7() {
 		// 입력받은 값과 일치하는 값이 있으면 인덱스 번호 출력
