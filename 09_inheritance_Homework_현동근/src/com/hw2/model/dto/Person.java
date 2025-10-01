@@ -23,8 +23,7 @@ public abstract class Person {
 		this.name = name;
 	}
 
-
-
+	// 객체 정보를 문자열로 반환한다
 	public abstract String getInfo();
 	
 }
