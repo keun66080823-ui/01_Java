@@ -10,9 +10,11 @@ import com.hw3.model.dto.Book;
 
 public class Library{
 	
-	Scanner sc = new Scanner(System.in);
+	private Scanner sc = new Scanner(System.in);
 	
 	private List<Book> book = new ArrayList<>();
+	
+	private List<Book> favorlist = new ArrayList<>();
 	
 	public Library() {
 		book.add(new Book(1111,"세이노의 가르침 ", "세이노", 6480, "데이원"));
@@ -48,10 +50,10 @@ public class Library{
 			case 2 : selectAll(); break;
 			case 3 : updateBook(); break;
 			case 4 : /*removeBook();*/ break;
-			case 5 : /*addBookMark();*/ break;
-			case 6 : /*removeBookMark();*/ break;
-			case 7 : /*selectBookMark();*/ break;
-			case 8 : /*gotcha(); */break;
+			case 5 : /*addBookMark();*/ break; //즐겨찾기
+			case 6 : /*removeBookMark();*/ break; //즐찾 삭제
+			case 7 : /*selectBookMark();*/ break; //즐찾 조회
+			case 8 : /*gotcha(); */break; //추천 도서 뽑기
 			case 0 : 
 				System.out.println("프로그램을 종료합니다.");
 				break;
@@ -77,14 +79,13 @@ public class Library{
 		
 		System.out.print("도서 저자 : ");
 		String author = sc.nextLine();
-		sc.nextLine();
 		
 		System.out.print("도서 가격 : ");
 		int price = sc.nextInt();
+		sc.nextLine();
 		
 		System.out.print("도서 출판사 : ");
 		String publisher = sc.nextLine();
-		sc.nextLine();
 		
 		book.add(new Book(num,title,author,price,publisher));
 		System.out.println("등록 완료");
@@ -166,11 +167,11 @@ public class Library{
 	                		System.out.println("1~4 또는 0을 선택하세요.");
 	                	}
 						
-					} catch (InputMismatchException e) {
-						System.out.println("1~4 또는 0을 선택하세요.");
-					}
 
 	                flag = true;
+	                } catch (InputMismatchException e) {
+	                	System.out.println("1~4 또는 0을 선택하세요.");
+	                }
 	            } while (choice != 0);
 
 	            break;
