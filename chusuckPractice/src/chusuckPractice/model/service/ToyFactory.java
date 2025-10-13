@@ -211,16 +211,23 @@ public class ToyFactory {
 	private void selectByAge() {
 		System.out.println("<연령별로 사용 가능한 장난감>");
 		
-//		List<Toy> list = new ArrayList<>(toys);
-//		
-//		Collections.sort(list);
-		//Map<Integer, String> materialMap = new HashMap<Integer, String>();
+		List<Toy> list = new ArrayList<>(toys);
+		Collections.sort(list);
 		
-		int maxAge = 999;
+		int before = 0;
+		int num = 1;
+		for(int i = 0; i < list.size(); i++) {
+			
+			if(list.get(i).getAge() != before) {
+				
+				System.out.println("[연령 : "+list.get(i).getAge()+"세]");
+				before = list.get(i).getAge();
+			}
+			System.out.println(num+". "+list.get(i));
+			num++;
+		}
 		
-		Map<Integer, List<Toy>> ageList = new HashMap<>();
 		
-		// 풀이 실패
 		
 		
 		
