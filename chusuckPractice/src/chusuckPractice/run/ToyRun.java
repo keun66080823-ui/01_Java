@@ -6,6 +6,7 @@ public class ToyRun {
 	public static void main(String[] args) {
 		ToyFactory service = new ToyFactory();
 		
+		service.display();
 		
 	}
 }
