@@ -439,7 +439,7 @@ public class StudentService {
 	/**
 	 * 7. 나이에 따라 오름차순 정렬(Comparable 인터페이스 사용)
 	 */
-	private void sortByName() { // 왜 아무것도 출력되지 않지?? 뭐지? 왜 나오긴 하는데 정렬이 안 됨??
+	private void sortByName() { 
 
 		Collections.sort(studentList, new Comparator<Student>() {
 
