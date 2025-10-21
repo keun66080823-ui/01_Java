@@ -45,6 +45,12 @@ public class ByteService {
 			
 			// String의 불변성 문제를 해결한 객체
 			// StringBuilder(비동기) / StringBuffer(동기)
+			
+			// String, StringBuilder, StringBuffer
+			//1. String(불변) : 특징 - '불변성(Immutable)'과 비동기화(카페 손님으로 비유하자면, 줄을 서지 않는다고 볼 수 있다. 빠르지만 데이터 변형 위험이 있다.)
+			//2. StringBuilder : 특징 - '가변성(Mutable)'과 비동기화
+			//3. StringBuffer : 특징 - 가변성과 동기화(카페 손님이 줄을 잘 선다고 이해하면 편함. 속도는 조금 느리지만 안정.)
+			
 			StringBuilder sb = new StringBuilder();
 			sb.append("Hello world!!\n");
 			sb.append("1234567890\n");
