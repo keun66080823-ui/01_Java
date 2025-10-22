@@ -38,8 +38,8 @@ public class ByteRun {
 		*/
 		
 		ByteService service = new ByteService();
-//		service.bufferedFileByteInput();
-		service.fileCopy();
+		service.bufferedFileByteInput();
+//		service.fileCopy();
 		
 		
 		
